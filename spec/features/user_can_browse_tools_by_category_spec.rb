@@ -9,6 +9,7 @@ RSpec.feature "Vistor can view tools by category" do
     chainsaw = create(:tool, name: "Chainsaw", category_id: power_tools.id)
     phillips = create(:tool, name: "Phillips", category_id: screwdrivers.id)
 
+    # byebug
     visit "/#{power_tools.name}"
 
     expect(page).to have_content drill.name

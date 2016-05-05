@@ -13,7 +13,8 @@ RSpec.feature "Admin logged in" do
     expect(admin.username).not_to eql(new_username)
     expect(admin.password).not_to eql(new_password)
     assert_equal edit_user_path(admin.id), current_path
-
+    # save_and_open_page
+    # byebug
     fill_in "Username", with: "nonsense"
     fill_in "Password", with: "more nonsense"
     click_on "Update My Account"
